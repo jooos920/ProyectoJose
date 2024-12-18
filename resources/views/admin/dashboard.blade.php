@@ -7,7 +7,7 @@
         <a href="{{ route('users.index') }}" class="btn btn-primary">Ver Usuarios</a>
         <a href="{{ route('productos.index') }}" class="btn btn-primary">Ver Productos</a>
         <a href="{{ route('categorias.index') }}" class="btn btn-primary">Ver Categorías de Productos</a>
-        {{-- <a href="{{ route('proveedores.index') }}" class="btn btn-primary">Ver Proveedores</a>
-            --}}
+        <a href="{{ route('sucursales.index') }}" class="btn btn-primary">Ver Sucursales</a>
+        
     </div>
 @endsection

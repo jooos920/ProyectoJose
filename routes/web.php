@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriasProductosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\SucursalesController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Middleware\AdminIsAuthenticated;
 use App\Http\Middleware\UserIsAuthenticated;
@@ -35,6 +36,15 @@ Route::middleware(AdminIsAuthenticated::class)->group(function () {
     Route::get('/editar_categoria/{categoria}', [CategoriasProductosController::class, 'edit'])->name('categorias.edit');
     Route::post('/editar_categoria/{categoria}', [CategoriasProductosController::class, 'update'])->name('categorias.update');
     Route::get('/eliminar_categoria/{id}', [CategoriasProductosController::class, 'destroy'])->name('categorias.destroy');
+
+    // Rutas Sucursales
+    Route::get('/sucursales', [SucursalesController::class, 'index'])->name('sucursales.index');
+    Route::get('/crear_sucursal', [SucursalesController::class, 'create'])->name('sucursales.create');
+    Route::post('/crear_sucursal', [SucursalesController::class, 'store'])->name('sucursales.store');
+    Route::get('/ver_sucursal/{sucursal}', [SucursalesController::class, 'show'])->name('sucursales.show');
+    Route::get('/editar_sucursal/{sucursal}', [SucursalesController::class, 'edit'])->name('sucursales.edit');
+    Route::post('/editar_sucursal/{sucursal}', [SucursalesController::class, 'update'])->name('sucursales.update');
+    Route::get('/eliminar_sucursal/{id}', [SucursalesController::class, 'destroy'])->name('sucursales.destroy');
 });
 
 Route::middleware(UserIsAuthenticated::class)->group(function () {
