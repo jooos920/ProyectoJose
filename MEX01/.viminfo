@@ -31,12 +31,22 @@
 |3,1,36,0,1,0,1734548602,"hy this me"
 
 # File marks:
-'0  3  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
-|4,48,3,0,1734548620,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
+'0  1  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,48,1,0,1734552198,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
+'1  3  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,49,3,0,1734548620,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
+'2  3  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,50,3,0,1734548620,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
 
 # Jumplist (newest first):
+-'  1  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,39,1,0,1734552198,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
 -'  3  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
 |4,39,3,0,1734548620,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
+-'  3  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,39,3,0,1734548620,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
+-'  2  43  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
+|4,39,2,43,1734548613,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
 -'  2  43  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
 |4,39,2,43,1734548613,"/c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG"
 -'  1  0  /c/xampp/htdocs/proyecto-laravel/.git/MERGE_MSG
