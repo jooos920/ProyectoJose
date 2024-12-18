@@ -16,7 +16,7 @@ class CategoriasProductosSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 10) as $index) {
-            DB::table('productos_categorias')->insert([
+            DB::table('categorias_productos')->insert([
                 'name' => $faker->word,
             ]);
         }

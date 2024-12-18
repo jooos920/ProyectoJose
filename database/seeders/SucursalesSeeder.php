@@ -22,8 +22,6 @@ class SucursalesSeeder extends Seeder
                 'phone' => $faker->phoneNumber,
                 'email' => $faker->unique()->companyEmail,
                 'manager' => $faker->name,
-                'status' => $faker->numberBetween(0, 1),
-                'location' => $faker->city,
             ]);
         }
     }
