@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriasProductosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\SucursalesController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Middleware\AdminIsAuthenticated;
@@ -45,6 +46,16 @@ Route::middleware(AdminIsAuthenticated::class)->group(function () {
     Route::get('/editar_sucursal/{sucursal}', [SucursalesController::class, 'edit'])->name('sucursales.edit');
     Route::post('/editar_sucursal/{sucursal}', [SucursalesController::class, 'update'])->name('sucursales.update');
     Route::get('/eliminar_sucursal/{id}', [SucursalesController::class, 'destroy'])->name('sucursales.destroy');
+
+    // Rutas Servicios
+Route::get('/servicios', [ServiciosController::class, 'index'])->name('servicios.index');
+Route::get('/crear_servicio', [ServiciosController::class, 'create'])->name('servicios.create');
+Route::post('/crear_servicio', [ServiciosController::class, 'store'])->name('servicios.store');
+Route::get('/ver_servicio/{servicio}', [ServiciosController::class, 'show'])->name('servicios.show');
+Route::get('/editar_servicio/{servicio}', [ServiciosController::class, 'edit'])->name('servicios.edit');
+Route::post('/editar_servicio/{servicio}', [ServiciosController::class, 'update'])->name('servicios.update');
+Route::get('/eliminar_servicio/{id}', [ServiciosController::class, 'destroy'])->name('servicios.destroy');
+
 });
 
 Route::middleware(UserIsAuthenticated::class)->group(function () {
