@@ -11,15 +11,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- Incluir jQuery desde CDN -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluir jQuery desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @include('sweetalert::alert')
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href={{route('dashboard')}}>Inicio</a>
+            <a class="navbar-brand" href={{ route('dashboard') }}>Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,10 +30,10 @@
                         <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Productos</a>
+                        <a class="nav-link" href="{{ route('productos.index') }}">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Categorias</a>
+                        <a class="nav-link" href=" {{ route('categorias.index') }}">Categorias</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Proveedores</a>
@@ -47,7 +47,7 @@
                             <li><a href="{{ route('users.show', auth()->user()->id) }}" class="dropdown-item">Ver
                                     Información</a></li>
                             <li>
-                                <a href="{{route('logout')}}" class="dropdown-item">Cerrar Sesión</a>
+                                <a href="{{ route('logout') }}" class="dropdown-item">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </li>
@@ -55,7 +55,7 @@
                 </ul>
             </div>
         </div>
-    </nav>    
+    </nav>
     <div class="container">
         @if (session('success'))
             <script>

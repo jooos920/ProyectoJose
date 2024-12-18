@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriasProductosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\InicioController;
@@ -24,10 +25,16 @@ Route::middleware(AdminIsAuthenticated::class)->group(function () {
     Route::get('/crear_usuario', [UsuariosController::class, 'create'])->name('users.create');
     Route::post('/crear_usuario', [UsuariosController::class, 'store'])->name('users.store');
     Route::get('/editarusuario/{user}', [UsuariosController::class, 'admin_edit'])->name('users.admin.edit');
-Route::post('/editarusuario/{user}', [UsuariosController::class, 'admin_update'])->name('users.admin.update');
+    Route::post('/editarusuario/{user}', [UsuariosController::class, 'admin_update'])->name('users.admin.update');
+    Route::get('/verinformacion/{user}', [UsuariosController::class, 'showAdmin'])->name('users.show');
 
-Route::get('/verinformacion/{user}', [UsuariosController::class, 'showAdmin'])->name('users.show');
-
+    // Productos Categorías
+    Route::get('/categorias', [CategoriasProductosController::class, 'index'])->name('categorias.index');
+    Route::get('/crear_categoria', [CategoriasProductosController::class, 'create'])->name('categorias.create');
+    Route::post('/crear_categoria', [CategoriasProductosController::class, 'store'])->name('categorias.store');
+    Route::get('/editar_categoria/{categoria}', [CategoriasProductosController::class, 'edit'])->name('categorias.edit');
+    Route::post('/editar_categoria/{categoria}', [CategoriasProductosController::class, 'update'])->name('categorias.update');
+    Route::get('/eliminar_categoria/{id}', [CategoriasProductosController::class, 'destroy'])->name('categorias.destroy');
 });
 
 Route::middleware(UserIsAuthenticated::class)->group(function () {
