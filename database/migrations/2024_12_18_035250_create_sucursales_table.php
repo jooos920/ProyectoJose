@@ -12,8 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sucursales', function (Blueprint $table) {
-            $table->id();
-            Schema::create('sucursales', function (Blueprint $table) {
                 $table->id();
                 $table->string('name');
                 $table->string('address');
@@ -22,7 +20,6 @@ return new class extends Migration
                 $table->string('manager');
                 $table->integer('status')->default(1);
                 $table->timestamps();
-            });
         });
     }
 
