@@ -29,6 +29,11 @@
             <input type="number" step="0.01" class="form-control" id="price" name="price" value="{{ old('price', $servicio->price) }}">
         </div>
 
+        <div class="form-group">
+            <label for="duration">Duración (en minutos)</label>
+            <input type="number" class="form-control" id="duration" name="duration" value="{{ old('duration', $servicio->duration) }}">
+        </div>
+
         <button type="submit" class="btn btn-primary">Actualizar Servicio</button>
     </form>
 </div>
@@ -40,7 +45,7 @@
         $('#serviceForm').on('submit', function(event) {
             event.preventDefault();
 
-            if ($('#name').val().trim() === '' && $('#description').val().trim() === '' && $('#price').val().trim() === '') {
+            if ($('#name').val().trim() === '' && $('#description').val().trim() === '' && $('#price').val().trim() === '' && $('#duration').val().trim() === '') {
                 Swal.fire("¡Error!", "No debe de haber campos vacíos", "error");
                 return;
             }
@@ -57,6 +62,12 @@
             const price = $('#price').val().trim();
             if (price === '' || isNaN(price) || parseFloat(price) <= 0) {
                 Swal.fire("¡Error!", "Por favor, ingresa un precio válido.", "error");
+                return;
+            }
+
+            const duration = $('#duration').val().trim();
+            if (duration === '' || isNaN(duration) || parseInt(duration) <= 0) {
+                Swal.fire("¡Error!", "Por favor, ingresa una duración válida en minutos.", "error");
                 return;
             }
 
