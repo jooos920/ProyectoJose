@@ -122,6 +122,14 @@ class UsuariosController extends Controller
         if (!$user) {
             return redirect()->route('users.index')->with('error', 'Usuario no encontrado');
         }
+        return view('users.users.show', compact('user'));
+    }
+    public function showAdmin(Usuarios $user)
+    {
+        if (!$user) {
+            return redirect()->route('users.index')->with('error', 'Usuario no encontrado');
+        }
         return view('admin.users.show', compact('user'));
+        
     }
 }

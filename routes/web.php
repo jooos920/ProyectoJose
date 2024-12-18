@@ -26,6 +26,8 @@ Route::middleware(AdminIsAuthenticated::class)->group(function () {
     Route::get('/editarusuario/{user}', [UsuariosController::class, 'admin_edit'])->name('users.admin.edit');
 Route::post('/editarusuario/{user}', [UsuariosController::class, 'admin_update'])->name('users.admin.update');
 
+Route::get('/verinformacion/{user}', [UsuariosController::class, 'showAdmin'])->name('users.show');
+
 });
 
 Route::middleware(UserIsAuthenticated::class)->group(function () {
@@ -36,7 +38,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/registrar', [AuthController::class, 'create'])->name('signup');
 Route::post('/registrar', [AuthController::class, 'store'])->name('signup.store');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/ver_informacion/{user}', [UsuariosController::class, 'show'])->name('users.show');
+Route::get('/ver_informacion/{user}', [UsuariosController::class, 'show'])->name('users_show');
 Route::get('/editar_usuario/{user}', [UsuariosController::class, 'edit'])->name('users.edit');
 Route::post('/editar_usuario/{user}', [UsuariosController::class, 'update'])->name('users.update');
 Route::get('/eliminar_usuario/{id}', [UsuariosController::class, 'destroy'])->name('users.destroy');
