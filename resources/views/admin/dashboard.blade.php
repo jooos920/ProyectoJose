@@ -8,6 +8,6 @@
         <a href="{{ route('productos.index') }}" class="btn btn-primary">Ver Productos</a>
         <a href="{{ route('categorias.index') }}" class="btn btn-primary">Ver Categorías de Productos</a>
         <a href="{{ route('sucursales.index') }}" class="btn btn-primary">Ver Sucursales</a>
-        
+        <a href="{{ route('servicios.index') }}" class="btn btn-primary">Ver Servicios</a>
     </div>
 @endsection
